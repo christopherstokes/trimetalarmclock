@@ -76,6 +76,8 @@ function checkBus() {
 							if (timeUntil <= timer) {
 								console.log("You have " + timeUntil + " minutes to make the " + getThatTrain + busOrTrain);
 								shell.exec('aplay bell.wav');
+							} else {
+								console.log("...");
 							}
 						} else {
 							timeUntil = Math.floor(checkTime(currentTime, new Date(resultsData.arrival[i].scheduled)));
@@ -83,7 +85,10 @@ function checkBus() {
 								console.log("You have " + timeUntil + " minutes to make the " + getThatTrain + busOrTrain);
 								shell.exec('aplay bell.wav');
 
+							} else {
+								console.log("...");
 							}
+
 
 						}
 					}
