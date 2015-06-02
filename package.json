@@ -9,12 +9,20 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node trimetalarmclock.js 348 54 15"
+    "test": "node trimetalarmclock.js 348"
   },
   "keywords": [
     "trimet",
     "alarm"
   ],
   "author": "Christopher Stokes",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xkfngs/trimetalarmclock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xkfngs/trimetalarmclock/issues"
+  },
+  "homepage": "https://github.com/xkfngs/trimetalarmclock#readme"
 }
