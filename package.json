@@ -1,0 +1,20 @@
+{
+  "name": "trimetalarmclock",
+  "version": "1.0.0",
+  "description": "Warns you of impending transit doom.",
+  "main": "trimetalarmclock.js",
+  "dependencies": {
+    "request": "^2.57.0",
+    "shelljs": "^0.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node trimetalarmclock.js 348 54 15"
+  },
+  "keywords": [
+    "trimet",
+    "alarm"
+  ],
+  "author": "Christopher Stokes",
+  "license": "MIT"
+}
