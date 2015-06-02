@@ -49,7 +49,6 @@ function checkBus() {
 					}
 				}
 				busOrTrain = " (bus)";
-				return oldRoute;
 			}
 
 
