@@ -16,3 +16,6 @@ syntax:
 	$ ./trimetalarmclock.js 11944 96 250
 	You have 245 minutes to make the 96 To Portland (bus)
 	Playing WAVE 'bell.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
+
+
+end
