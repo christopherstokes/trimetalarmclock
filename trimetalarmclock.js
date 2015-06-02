@@ -37,13 +37,7 @@ function checkBus() {
 
 			function checkTrain(oldRoute) {
 				if (trains.hasOwnProperty(oldRoute)) {
-					if (route == trains[oldRoute]) {
-						route = trains[oldRoute];
-						return true;
-					} else {
-						route = trains[oldRoute];
-						return false;
-					}
+					route = trains[oldRoute];
 				}
 			}
 
@@ -62,11 +56,11 @@ function checkBus() {
 			for (var i = 0; i < resultsData.arrival.length; i++) {
 				var checkThatTime = Math.floor(checkTime(currentTime, new Date(resultsData.arrival[i].estimated || resultsData.arrival[i].scheduled))),
 					getThatTrain = resultsData.arrival[i].shortSign;
+				checkTrain(route);
 				if (route == null || '') {
 					console.log(getThatTrain + " -- " + checkThatTime + " minutes");
 					clearInterval(alarmLoop);
-				} else if (resultsData.arrival[i].route == route || checkTrain(route)) {
-					getTrain(route);
+				} else if (resultsData.arrival[i].route == route || getTrain(route) == route) {
 					if (timer == null || '') {
 						console.log(getThatTrain + " -- " + checkThatTime + " minutes");
 						clearInterval(alarmLoop);
