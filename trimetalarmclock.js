@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 
 var shell = require('shelljs'),
-	request = require("request")
+	request = require("request"),
+	config = require('./config');
 
 var commandArgs = process.argv.slice(2),
 	locID = commandArgs[0],
 	route = commandArgs[1],
 	timer = commandArgs[2],
-	url = "http://developer.trimet.org/ws/V1/arrivals/locIDs/" + locID + "/json/true/appID/DB5E625704571597E22E37191",
+	url = "http://developer.trimet.org/ws/V1/arrivals/locIDs/" + locID + "/json/true/appID/" + config.trimet.appIDi,
 	trains = {
 		"blue": 100,
 		"green": 200,

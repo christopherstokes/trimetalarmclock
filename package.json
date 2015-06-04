@@ -1,6 +1,6 @@
 {
   "name": "trimetalarmclock",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Warns you of impending transit doom.",
   "main": "trimetalarmclock.js",
   "dependencies": {

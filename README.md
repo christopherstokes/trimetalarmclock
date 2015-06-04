@@ -1,6 +1,8 @@
 # trimetalarmclock
 sets an alarm to remind you about your bus
 
+clone this repository, use npm install to add modules, and add trimet appID to the config example and rename that file to config.js
+
 syntax:
 
 	$./trimetalarmclock.js [stopID] [route] [timer]
