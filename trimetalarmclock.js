@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+var p = require('parsec');
+
 var shell = require('shelljs'),
 	request = require("request"),
 	config = require('./config');
@@ -8,7 +10,7 @@ var commandArgs = process.argv.slice(2),
 	locID = commandArgs[0],
 	route = commandArgs[1],
 	timer = commandArgs[2],
-	url = "http://developer.trimet.org/ws/V1/arrivals/locIDs/" + locID + "/json/true/appID/" + config.trimet.appIDi,
+	url = "http://developer.trimet.org/ws/V1/arrivals/locIDs/" + locID + "/json/true/appID/" + config.trimet.appID,
 	trains = {
 		"blue": 100,
 		"green": 200,
@@ -22,9 +24,6 @@ var commandArgs = process.argv.slice(2),
 	waiting = '';
 
 function processCommands() {
-	for (var i = 0; i < commandArgs.length; i++) {
-		// add in functionality
-	}
 }
 
 function checkBus() {
@@ -97,5 +96,6 @@ function checkBus() {
 	})
 }
 
+processCommands();
 checkBus();
 var alarmLoop = setInterval(checkBus, 30000);
